@@ -1,0 +1,617 @@
+@charset "utf-8";
+
+/*
+Theme Name: ehemm
+Theme URI: http:/ehemm.net/
+Author: Guillem Andreu (@Guill3m)
+Author URI: http://guillemandreu.com/
+Description: A simple Wordpress theme, on green.
+Version: 1.0 beta
+License: If you like it you can use it freely. Period.
+Tags: two-columns, green, white, light
+*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Signika:300,600|Neuton:400,700,400italic|Acme);
+
+
+/*
+---------- RESET ---------- 
+*/
+
+html, body, div, span, a, img, h1, h2, h3, h4, h5, h6, hgroup, p, dl, dialog, dt, dd, ol, ul, li, abbr, acronym, address, b, big, blockquote, cite, code, del, dfn, em, i, ins, kbd, pre, q, samp, tt, var, small, strong, sub, sup, object, iframe, form, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section, figure, menu, time, mark, audio, video {
+	background: transparent;
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	vertical-align: baseline;
+	white-space: normal;
+}
+article, aside, footer, header, nav, section, dialog, figure, hgroup, menu {
+	display: block;
+}
+blockquote:before, q:before {
+  content: open-quote;
+}
+blockquote:after, q:after {
+  content: close-quote;
+}
+blockquote, q {
+	quotes: "«" "»";
+}
+del, ins {
+	text-decoration: none;
+}
+hr {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+nav ul {
+	list-style-type: none;
+}
+ol, ul {
+	list-style: none;
+}
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	white-space: normal;
+}
+
+
+/*
+---------- GRID ---------- 
+960px width
+9 columns
+30px column gap
+20px line height
+*/
+
+.center {
+	margin: 0 auto;
+}
+.columnsx1, .columnsx2, .columnsx3, .columnsx4, .columnsx5, .columnsx6, .columnsx7, .columnsx8 {
+	display: block;
+	float: left;
+}
+.columnsx1 {
+	width: 80px;
+}
+.columnsx2 {
+	width: 190px;
+}
+.columnsx3 {
+	width: 300px;
+}
+.columnsx4 {
+	width: 410px;
+}
+.columnsx5 {
+	width: 520px;
+}
+.columnsx6 {
+	width: 630px;
+}
+.columnsx7 {
+	width: 740px;
+}
+.columnsx8 {
+	width: 850px;
+}
+.columnsx9 {
+	display: block;
+	width: 960px;
+}
+.columngapleft {
+	margin-left: 30px;
+}
+.spacebottom {
+	margin-bottom: 20px;
+}
+.spacebottomx2 {
+	margin-bottom: 40px;
+}
+.spacebottomx3 {
+	margin-bottom: 60px;
+}
+.spacebottomx4 {
+	margin-bottom: 80px;
+}
+.clear {
+	clear: both;
+}
+.showgrid { /* For design purposes only */
+	background: url(img/baseline.png) repeat;
+}
+
+
+/*
+---------- STYLES ----------
+Primary color:    rgb(109,155,57);  Dark Green
+Secondary color:  rgb(206,198,55);  Light Yellowish Green
+Text color:       rgb(53,52,41);    Dark Grey
+Instead of white: rgb(240,240,240); Really Light Grey
+*/
+
+body {
+	background: url("img/noise-white.jpg") repeat center top rgb(240,240,240);
+	color: rgb(53,52,41);
+	font: 16px/20px Neuton, Georgia, serif;
+	text-align: left;
+}
+a {
+	color: rgb(109,155,57);
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(206,198,55);
+}
+a:active {
+	color: rgb(53,52,41);
+}
+b, strong {
+	font-weight: bold;
+}
+i, em {
+	font-style: oblique;
+}
+li, p {
+	position: relative;
+	top: 4px;
+}
+li ul li {
+	margin-left: 20px;
+	top: 0;
+}
+small, .small {
+	color: rgb(109,155,57);
+	font: 300 12px/20px Signika, sans-serif;
+}
+.small2 {
+	color: rgb(109,155,57);
+	font: 13px/20px Neuton, Georgia, serif;
+}
+small b, .small b {
+	font-weight: 600;
+}
+small p, .small p, p.small, small li, .small li {
+	top: 6px;
+}
+.small2 p, .small2 li {
+	top: 5px;
+}
+.centeredtext, .centeredtext p {
+	text-align: center;
+}
+.roundedcorners {
+	border-radius: 5px;
+}
+
+
+/*
+---------- HEADER ---------- 
+*/
+
+.headerbackground {
+	background: url(img/noise-green.jpg) repeat center top rgb(109,155,57);
+	color: rgb(240,240,240);
+	float: left;
+	width: 100%;
+}
+.header {
+	display: block;
+	height: 40px;
+	padding: 40px 0;
+}
+h1 {
+	float: left;
+	font: 64px/40px Acme, sans-serif;
+}
+h1, .header a {
+	color: rgb(240,240,240);
+}
+.header a:hover {
+	color: rgb(206,198,55);
+}
+.header a:active {
+	color: rgb(53,52,41);
+}
+#headermenu {
+	float: right;
+}
+.headerextras {
+	background: url(img/menu-sprite.png) no-repeat 0 0;
+	display: block;
+	float: left;
+	height: 40px;
+}
+.squaredbutton {
+	width: 40px;
+}
+.squaredbutton.rss {
+	background-position: 0 0;
+}
+.squaredbutton.twittermenu {
+	background-position: -120px 0;
+}
+.menubutton {
+	background-position: -240px 0;
+	width: 80px;
+}
+.squaredbutton.rss:hover {
+	background-position: -40px 0;
+}
+.squaredbutton.twittermenu:hover {
+	background-position: -160px 0;
+}
+.menubutton:hover {
+	background-position: -320px 0;
+}
+.squaredbutton.rss:active {
+	background-position: -80px 0;
+}
+.squaredbutton.twitter:active {
+	background-position: -200px 0;
+}
+.menubutton:active {
+	background-position: -400px 0;
+}
+.headerbottom {
+	background: url(img/noise-green-triangles.png) repeat-x center top transparent;
+	display: block;
+	height: 20px;
+	width: 100%;
+}
+
+
+/*
+---------- MENU ---------- 
+*/
+
+#menu_hidden {
+	display: none;
+}
+.margintop {
+	margin-top: 20px;
+}
+h4 {
+	font: 300 17px/20px Signika, sans-serif;
+	position: relative;
+	top: 4px;
+}
+#menu_hidden h4 {
+	color: rgb(206,198,55);
+	margin-bottom: 20px;
+}
+#menu_hidden label {
+	color: rgb(206,198,55);
+}
+#menu_hidden a {
+	color: rgb(240,240,240);
+}
+#menu_hidden a:hover {
+	color: rgb(53,52,41);
+}
+#menu_hidden a:active {
+	color: rgb(206,198,55);
+}
+#subscribe-field {
+	background-color: transparent;
+	border-bottom: 1px solid rgb(240,240,240);
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	font: 300 14px/20px Signika, sans-serif;
+	margin-top: 20px;
+}
+#subscribe-field:hover {
+	border-bottom: 1px solid rgb(53,52,41);
+}
+#menu_hidden input[name='jetpack_subscriptions_widget'] {
+	background-color: rgb(53,52,41);
+	border: none;
+	color: rgb(240,240,240);
+	font: 300 14px/20px Signika, sans-serif;
+	height: 20px;
+	margin: 5px 0 15px;
+	padding: 1px 5px 0;
+	width: 100px;
+}
+#menu_hidden input[name='jetpack_subscriptions_widget']:hover {
+	background-color: rgb(240,240,240);
+	color: rgb(53,52,41);
+}
+#menu_hidden input[name='jetpack_subscriptions_widget']:active {
+	background-color: rgb(206,198,55);
+}
+
+
+/*
+---------- SEARCH FORM ---------- 
+*/
+
+.searchform, .searchbutton {
+	border: 0;
+	display: block;
+	float: left;
+	margin: 13px 0 27px;
+}
+.searchform {
+	background: url(img/searchform.jpg) no-repeat left center transparent;
+	color: rgb(53,52,41);
+	font: 300 17px/20px Signika, sans-serif;
+	height: 36px;
+	padding: 4px 0 0 8px;
+	width: 267px;
+}
+.searchbutton {
+	background: url(img/searchbutton-sprite.jpg) no-repeat center 0 transparent;
+	cursor:pointer;
+	height: 40px;
+	padding: 0;
+	width: 25px;
+}
+form:hover .searchbutton, .searchbutton:hover {
+	background-position: 0 -40px;
+}
+form {
+	clear: both;
+}
+
+
+/*
+---------- ASIDES ---------- 
+*/
+
+.postinfo {
+	padding-top: 80px;
+}
+.pubdate, .author, .category, .commentnumber, .twitter, .googleplus, .facebook {
+	background: url(img/aside-sprite.png) no-repeat 0 0 transparent;
+	padding-left: 20px;
+}
+.pubdate {
+	background-position: 0 0;
+}
+.author {
+	background-position: 0 -20px;
+}
+.category {
+	background-position: 0 -120px;
+}
+.commentnumber {
+	background-position: 0 -40px;
+}
+.twitter {
+	background-position: 0 -60px;
+}
+.facebook {
+	background-position: 0 -80px;
+}
+.googleplus {
+	background-position: 0 -100px;
+}
+.count {
+	color: rgb(53,52,41);
+	float: right;
+	position: relative;
+}
+
+
+/*
+---------- POST ---------- 
+*/
+
+h2 {
+	font: bold 40px/40px Neuton, Georgia, serif;
+	letter-spacing: 1px;
+	position: relative;
+	top: 4px;
+}
+h2 + p, .postcontent p + p, .comment p + p {
+	margin-top: 20px;
+}
+h2, h2 a {
+	color: rgb(109,155,57);
+}
+h2 a:hover {
+	color: rgb(206,198,55);
+}
+h2 a:active {
+	color: rgb(53,52,41);
+}
+h3 {
+	color: rgb(206,198,55);
+	font: 300 21px/20px Signika, sans-serif;
+	margin: 10px 0;
+	position: relative;
+	top: 4px;
+}
+.postcontent h4 {
+	color: rgb(109,155,57);
+	margin-top: 20px;
+}
+.postcontent h4 b, .postcontent h4 strong {
+	font-weight: 600;
+}
+/*.postcontent p + p, .comment p + p {
+	text-indent: 30px;
+}*/
+.postcontent ul {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+.postseparator {
+	background: url(img/separator-posts.png) no-repeat center top;
+	height: 20px;
+}
+
+
+/*
+---------- COMMENTS ---------- 
+*/
+
+#comments h3, #reply h3 {
+	color: rgb(109,155,57);
+	font: 24px/20px Neuton, Georgia, serif;
+	margin: 0 0 40px 220px;
+	position: relative;
+	top: 1px;
+}
+.avatar {
+	display:block;
+	float:left;
+	height:40px;
+	margin: 5px 15px 0 0;
+	width:40px;
+}
+.comment {
+	font: 300 14px/20px Signika, sans-serif;
+}
+.comment p {
+	top: 6px;
+}
+.authorcomment {
+	font: 16px/20px Neuton, Georgia, serif;
+}
+.authorcomment p {
+	top: 4px;
+}
+
+
+/*
+---------- COMMENT FORM ---------- 
+*/
+
+label {
+	color: rgb(109,155,57);
+}
+label:hover {
+	color: rgb(53,52,41);
+}
+.commentform {
+	background-color: transparent;
+	border-bottom: 1px solid rgb(109,155,57);
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	font: 300 14px/20px Signika, sans-serif;
+}
+.inputcomment {
+	height: 18px;
+	margin: 5px 0 14px;
+	padding: 2px 0 0;
+	width: 190px;
+}
+.textareacomment {
+	height: 160px;
+	margin: 17px 0 11px;
+	padding: 9px 0 18px;
+	width: 740px;
+}
+.commentform:hover {
+	border-bottom: 1px solid rgb(53,52,41);
+}
+.commentbutton {
+	background: url(img/noise-green.jpg) repeat center top rgb(109,155,57);
+	border: none;
+	color: rgb(240,240,240);
+	font: 300 14px/20px Signika, sans-serif;
+	height: 20px;
+	margin: 5px 0 15px;
+	padding: 1px 5px 0;
+	width: 80px;
+}
+.commentbutton:hover {
+	background: rgb(53,52,41);
+	color: rgb(240,240,240);
+}
+.commentbutton:active {
+	color: rgb(109,155,57);
+}
+.requiredtext {
+	float: right;
+}
+
+
+/*
+---------- ALERTS ---------- 
+*/
+
+#not-found h2, #not-found h3, .unapprovedcomment {
+	color: rgb(200,0,0);
+}
+#not-found h3, .unapprovedcomment {
+	font-weight: 600;
+}
+p.unapprovedcomment + p {
+	text-indent: 0;
+}
+
+
+/*
+---------- FOOTER ---------- 
+*/
+
+.footer {
+	background: url(img/separator-footer.png) no-repeat center top;
+	padding: 20px 0;
+}
+.footer a {
+	border-bottom: 1px dotted rgb(109,155,57);
+}
+.footer a:hover {
+	border-bottom: 1px dotted rgb(206,198,55);
+}
+.footer a:active {
+	border-bottom: 1px dotted rgb(53,52,41);
+}
+.go-upstairs {
+	background: url(img/noise-green.jpg) repeat center top rgb(109,155,57);
+	border-top-left-radius: 5px;
+	bottom: 0;
+	display: block;
+	padding: 0 10px;
+	position: fixed;
+	right: 0;
+}
+.go-upstairs a {
+	color: rgb(240,240,240);
+}
+.go-upstairs a:hover {
+	color: rgb(206,198,55);
+}
+.go-upstairs a:active {
+	color: rgb(53,52,41);
+}
+
+
+/*
+---------- EXTRAS ---------- 
+*/
+
+::-moz-selection {
+  background: rgb(206,198,55);
+  color: rgb(53,52,41);
+  text-shadow: none;
+}
+::selection {
+  background: rgb(206,198,55);
+  color: rgb(53,52,41);
+  text-shadow: none;
+ }
